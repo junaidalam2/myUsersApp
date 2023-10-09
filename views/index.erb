@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users index page</title>
+    </head>
+    <body>
+        <h1>Users</h1>
+        <table>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th> 
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+            <% @users.each do |record| %>
+                <tr>
+                    <td><%= record['firstname'] %></td>
+                    <td><%= record['lastname'] %></td>
+                    <td><%= record['age'] %></td>
+                    <td><%= record['email'] %></td>
+                </tr>
+            <% end %>
+        </table>
+    </body>
+</html>
